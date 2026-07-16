@@ -2,10 +2,10 @@
 
 # html2img JavaScript client
 
-[![npm Version](https://img.shields.io/npm/v/%40html2img%2Fclient)](https://www.npmjs.com/package/@html2img/client)
-[![Node Version](https://img.shields.io/node/v/%40html2img%2Fclient)](https://www.npmjs.com/package/@html2img/client)
-[![Downloads](https://img.shields.io/npm/dm/%40html2img%2Fclient)](https://www.npmjs.com/package/@html2img/client)
-[![License](https://img.shields.io/npm/l/%40html2img%2Fclient)](LICENSE)
+[![npm Version](https://img.shields.io/npm/v/%40html2img-api%2Fclient)](https://www.npmjs.com/package/@html2img-api/client)
+[![Node Version](https://img.shields.io/node/v/%40html2img-api%2Fclient)](https://www.npmjs.com/package/@html2img-api/client)
+[![Downloads](https://img.shields.io/npm/dm/%40html2img-api%2Fclient)](https://www.npmjs.com/package/@html2img-api/client)
+[![License](https://img.shields.io/npm/l/%40html2img-api%2Fclient)](LICENSE)
 
 The official JavaScript and TypeScript client for the [HTML to Image API](https://html2img.com) at html2img.com. Turn HTML and CSS into images, capture screenshots of live URLs, and render named templates, all returning a typed response object.
 
@@ -30,19 +30,19 @@ Browse the [full template library](https://html2img.com/templates), or try the n
 ## Installation
 
 ```bash
-npm install @html2img/client
+npm install @html2img-api/client
 # or
-pnpm add @html2img/client
+pnpm add @html2img-api/client
 # or
-yarn add @html2img/client
+yarn add @html2img-api/client
 # or
-bun add @html2img/client
+bun add @html2img-api/client
 ```
 
 ## Quick start
 
 ```js
-import { Html2img } from '@html2img/client';
+import { Html2img } from '@html2img-api/client';
 
 const client = new Html2img('your-api-key');
 
@@ -58,7 +58,7 @@ console.log(response.url); // https://i.html2img.com/abc123def456.png
 CommonJS works too:
 
 ```js
-const { Html2img } = require('@html2img/client');
+const { Html2img } = require('@html2img-api/client');
 ```
 
 The API returns a JSON envelope containing the CDN URL of the generated image, not the raw bytes, so you can cache and re-serve it from your own infrastructure. New to the API? Start with the [getting started guide](https://html2img.com/docs/getting-started).
@@ -70,7 +70,7 @@ TypeScript declarations are bundled, so every option, response property and erro
 Pass your API key as a string, or an options object with optional overrides:
 
 ```js
-import { Html2img } from '@html2img/client';
+import { Html2img } from '@html2img-api/client';
 
 const client = new Html2img({
   apiKey: 'your-api-key',
@@ -89,7 +89,7 @@ your own retry or logging middleware, or support a runtime without a global
 headers on every request.
 
 ```js
-import { Html2img } from '@html2img/client';
+import { Html2img } from '@html2img-api/client';
 
 const client = new Html2img({
   apiKey: 'your-api-key',
@@ -240,7 +240,7 @@ handle any error, or check for a specific subclass. No raw `fetch` error
 escapes the client.
 
 ```js
-import { Html2imgError, ValidationError, InsufficientCreditsError } from '@html2img/client';
+import { Html2imgError, ValidationError, InsufficientCreditsError } from '@html2img-api/client';
 
 try {
   const response = await client.html({ html: document });
