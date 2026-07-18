@@ -1,5 +1,5 @@
 {
-  "name": "@html2img-api/client",
+  "name": "@html2img/client",
   "version": "1.0.0",
   "description": "Official JavaScript and TypeScript SDK for the html2img HTML-to-image API: render HTML or CSS to PNG, screenshot live URLs, generate images from templates, and export PDFs.",
   "keywords": [
