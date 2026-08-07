@@ -122,17 +122,6 @@ export class ValidationError extends Html2imgError {
 }
 
 /**
- * Thrown on a 429 response when the account exceeds its request rate or
- * plan quota.
- */
-export class RateLimitError extends Html2imgError {
-  constructor(message: string, options: Html2imgErrorOptions = {}) {
-    super(message, options);
-    this.name = 'RateLimitError';
-  }
-}
-
-/**
  * Thrown on a 504 response when a synchronous render exceeds the renderer
  * budget. The API `code` is `timeout_error` or `api_timeout_error`.
  *

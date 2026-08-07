@@ -19,6 +19,12 @@ export class RenderResponse {
    */
   readonly url: string | null;
 
+  /**
+   * When the hosted render expires, as an ISO 8601 string. Null on paid
+   * plans, where renders stay hosted permanently; set on free-tier renders.
+   */
+  readonly expiresAt: string | null;
+
   /** Credits left on the account after this call, when reported. */
   readonly creditsRemaining: number | null;
 
@@ -42,6 +48,7 @@ export class RenderResponse {
     this.success = Boolean(payload['success']);
     this.id = asString(payload['id']);
     this.url = asString(payload['url']);
+    this.expiresAt = asString(payload['expires_at']);
     this.creditsRemaining = asInteger(payload['credits_remaining']);
     this.status = asString(payload['status']);
     this.message = asString(payload['message']);

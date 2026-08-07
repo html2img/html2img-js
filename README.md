@@ -206,6 +206,7 @@ Every method resolves to a `RenderResponse`:
 response.success; // boolean
 response.id; // string | null, the render id
 response.url; // string | null, the CDN URL of the image
+response.expiresAt; // string | null, ISO 8601 expiry of a free-tier render; null on paid plans
 response.creditsRemaining; // number | null, credits left after this call
 response.status; // string | null, "processing" for async jobs
 response.message; // string | null
@@ -269,7 +270,6 @@ try {
 | `NotSubscribedError`       | 403, no active subscription.                     |
 | `NotFoundError`            | 404, for example an unknown template slug.       |
 | `ValidationError`          | 400 or 422, with `details` per field.            |
-| `RateLimitError`           | 429, rate or quota exceeded.                     |
 | `TimeoutError`             | 504, the synchronous render budget was exceeded. |
 | `ServerError`              | 5xx, an unexpected renderer error.               |
 | `ConnectionError`          | the request never reached a response.            |

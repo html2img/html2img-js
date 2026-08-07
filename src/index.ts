@@ -8,7 +8,6 @@ export {
   InsufficientCreditsError,
   NotFoundError,
   NotSubscribedError,
-  RateLimitError,
   ServerError,
   TimeoutError,
   ValidationError,

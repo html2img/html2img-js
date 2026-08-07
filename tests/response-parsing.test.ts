@@ -8,6 +8,7 @@ describe('response parsing', () => {
       jsonResponse(200, {
         success: true,
         id: '550e8400-e29b-41d4-a716-446655440000',
+        expires_at: '2026-08-14T09:16:39+00:00',
         credits_remaining: 4999,
         url: 'https://i.html2img.com/abc123def456.png',
       }),
@@ -19,6 +20,7 @@ describe('response parsing', () => {
     expect(response.success).toBe(true);
     expect(response.id).toBe('550e8400-e29b-41d4-a716-446655440000');
     expect(response.url).toBe('https://i.html2img.com/abc123def456.png');
+    expect(response.expiresAt).toBe('2026-08-14T09:16:39+00:00');
     expect(response.creditsRemaining).toBe(4999);
     expect(response.isProcessing()).toBe(false);
     expect(response.status).toBeNull();
@@ -45,6 +47,22 @@ describe('response parsing', () => {
     expect(response.status).toBe('processing');
     expect(response.message).toBe('Image generation started');
     expect(response.url).toBeNull();
+  });
+
+  it('treats a null or absent expires_at as null', async () => {
+    const { client } = mockClient([
+      jsonResponse(200, {
+        success: true,
+        id: '550e8400-e29b-41d4-a716-446655440000',
+        expires_at: null,
+        credits_remaining: 4999,
+        url: 'https://i.html2img.com/abc123def456.png',
+      }),
+    ]);
+
+    const response = await client.html({ html: '<h1>Hi</h1>' });
+
+    expect(response.expiresAt).toBeNull();
   });
 
   it('treats credits_remaining as null when the API omits it', async () => {

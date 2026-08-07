@@ -5,7 +5,6 @@ import {
   InsufficientCreditsError,
   NotFoundError,
   NotSubscribedError,
-  RateLimitError,
   ServerError,
   TimeoutError,
   ValidationError,
@@ -113,7 +112,7 @@ export class Html2img {
   /**
    * Render a named template from a JSON data payload.
    *
-   * @param slug The template slug, for example `invoice`.
+   * @param slug The template slug, for example `invoice-image`.
    * @param data The template data, validated server-side per template.
    */
   async template(slug: string, data: Record<string, unknown> = {}): Promise<RenderResponse> {
@@ -196,10 +195,6 @@ function mapErrorResponse(status: number, payload: ErrorPayload): Html2imgError 
 
   if (status === 404) {
     return new NotFoundError(message, options);
-  }
-
-  if (status === 429) {
-    return new RateLimitError(message, options);
   }
 
   if (status === 408 || status === 504) {
