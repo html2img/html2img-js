@@ -280,12 +280,12 @@ try {
 Anything that can make an HTTP request works with the API. There is an official
 [PHP client](https://github.com/html2img/html2img-php) and a
 [Laravel package](https://github.com/html2img/html2img-laravel), plus worked
-guides for [Laravel](https://html2img.com/docs/usage/laravel),
-[Ruby on Rails](https://html2img.com/docs/usage/rails),
-[Python](https://html2img.com/docs/usage/python),
-[JavaScript and Node.js](https://html2img.com/docs/usage/javascript),
-[React](https://html2img.com/docs/usage/react) and
-[Vue](https://html2img.com/docs/usage/vue).
+guides for [Laravel](https://html2img.com/integrations/laravel/),
+[Ruby and Rails](https://html2img.com/integrations/ruby/),
+[Python](https://html2img.com/integrations/python/),
+[JavaScript and Node.js](https://html2img.com/integrations/javascript/),
+[React](https://html2img.com/integrations/javascript/#react-and-nextjs) and
+[Vue](https://html2img.com/integrations/javascript/#vue-and-nuxt).
 
 ## Development
 
