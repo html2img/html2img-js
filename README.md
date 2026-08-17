@@ -14,7 +14,7 @@ Every render runs in real Chrome, so flexbox, grid, custom properties, web fonts
 ## What you can build
 
 - **Open Graph and social images**, generated per page or post. See the [Open Graph image template](https://html2img.com/templates/open-graph-image) and [Twitter/X post template](https://html2img.com/templates/twitter-post).
-- **Business documents** such as [invoices](https://html2img.com/templates/invoice-image), [receipts](https://html2img.com/templates/receipt-image), [event tickets](https://html2img.com/templates/event-ticket) and [certificates](https://html2img.com/templates/certificate-of-completion).
+- **Business documents** such as [invoices](https://html2img.com/templates/invoice-image), [receipts](https://html2img.com/templates/receipt-image), [event tickets](https://html2img.com/templates/event-ticket) and [certificates](https://html2img.com/templates/certificate-of-completion), as PNGs or as PDFs through the [HTML to PDF API](https://html2img.com/html-to-pdf/).
 - **Developer assets** such as [code screenshots](https://html2img.com/templates/code-screenshot) and [GitHub social previews](https://html2img.com/templates/github-social-preview).
 - **URL screenshots**, full page or cropped to a single element, with CSS injection to hide cookie banners and chat widgets before capture.
 
@@ -140,8 +140,9 @@ Set `format` to `'pdf'` on either request and the render comes back as an
 A4 portrait vector PDF instead of a PNG: text stays selectable and searchable,
 webfonts are embedded and long content paginates automatically. The API ignores
 `width`, `height`, `dpi`, `fullpage` and `selector` in PDF mode, and the
-response `url` points at a `.pdf` file. One credit, the same as an image. See
-the [`format` parameter docs](https://html2img.com/docs/parameters/format/).
+response `url` points at a `.pdf` file. One credit, the same as an image. This
+is the [HTML to PDF API](https://html2img.com/html-to-pdf/); see the
+[`format` parameter docs](https://html2img.com/docs/parameters/format/).
 
 ```js
 const response = await client.html({
@@ -300,7 +301,7 @@ npm run build         # tsup, outputs dist/
 
 ## Links
 
-[Website](https://html2img.com) · [Documentation](https://html2img.com/docs) · [Templates](https://html2img.com/templates) · [Tools](https://html2img.com/tools) · [Features](https://html2img.com/features) · [Comparisons](https://html2img.com/compare) · [Articles](https://html2img.com/articles) · [Pricing](https://html2img.com/pricing)
+[HTML to Image API](https://html2img.com) · [Screenshot API](https://html2img.com/screenshot-api/) · [HTML to PDF API](https://html2img.com/html-to-pdf/) · [Documentation](https://html2img.com/docs) · [JavaScript guide](https://html2img.com/integrations/javascript/) · [Templates](https://html2img.com/templates) · [Tools](https://html2img.com/tools) · [Features](https://html2img.com/features) · [Comparisons](https://html2img.com/compare) · [Articles](https://html2img.com/articles) · [Pricing](https://html2img.com/pricing)
 
 ## Licence
 
