@@ -5,6 +5,17 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] - 2026-09-23
+
+### Changed
+
+- The `InsufficientCreditsError` docblock no longer says credits run out for
+  the current billing period. Free accounts have a one-off allowance of 50
+  credits; paid plans renew each billing period.
+- README: explain the free tier (50 one-off credits, renders hosted for seven
+  days) and list every official package in a new "Other official packages"
+  section.
+
 ## [2.0.0] - 2026-08-07
 
 ### Added
@@ -42,4 +53,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dual ESM and CommonJS builds with bundled TypeScript declarations.
 - Vitest test suite, strict TypeScript and Prettier configuration.
 
+[2.0.1]: https://github.com/html2img/html2img-js/releases/tag/v2.0.1
 [1.0.0]: https://github.com/html2img/html2img-js/releases/tag/v1.0.0

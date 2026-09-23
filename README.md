@@ -25,6 +25,8 @@ Browse the [full template library](https://html2img.com/templates), or try the n
 - Node.js 18 or newer (for the built-in global `fetch`). Bun, Deno and edge runtimes work too.
 - An HTML to Image API key, issued per account from your [dashboard](https://app.html2img.com/register)
 
+Every account starts with 50 free credits and no card is needed to get started. Free-tier renders are hosted for seven days; on any paid [plan](https://html2img.com/pricing) they are hosted permanently, including everything you rendered before upgrading.
+
 > **Keep your API key on the server.** This client is designed for server-side use: Node.js scripts, API routes, background jobs and serverless functions. Shipping your key in browser code would let anyone spend your credits.
 
 ## Installation
@@ -276,17 +278,16 @@ try {
 | `ConnectionError`          | the request never reached a response.            |
 | `Html2imgError`            | base type for all of the above.                  |
 
-## Other languages
+## Other official packages
 
-Anything that can make an HTTP request works with the API. There is an official
-[PHP client](https://github.com/html2img/html2img-php) and a
-[Laravel package](https://github.com/html2img/html2img-laravel), plus worked
-guides for [Laravel](https://html2img.com/integrations/laravel/),
-[Ruby and Rails](https://html2img.com/integrations/ruby/),
-[Python](https://html2img.com/integrations/python/),
-[JavaScript and Node.js](https://html2img.com/integrations/javascript/),
-[React](https://html2img.com/integrations/javascript/#react-and-nextjs) and
-[Vue](https://html2img.com/integrations/javascript/#vue-and-nuxt).
+The same API has official packages for other languages and platforms, all available now:
+
+- **SDKs:** [PHP](https://github.com/html2img/html2img-php) · [Python](https://github.com/html2img/html2img-python) · [Ruby](https://github.com/html2img/html2img-ruby)
+- **Frameworks:** [Laravel](https://github.com/html2img/html2img-laravel) · [Django](https://github.com/html2img/html2img-django)
+- **CMS plugins:** [WordPress](https://wordpress.org/plugins/html2img/) · [Statamic](https://github.com/html2img/statamic-og-images) · [Craft CMS](https://plugins.craftcms.com/og-images)
+- **Automation and AI:** [GitHub Action](https://github.com/marketplace/actions/html-to-image) · [MCP server](https://html2img.com/mcp/) (paid plans)
+
+There are also worked guides for [React](https://html2img.com/integrations/javascript/#react-and-nextjs) and [Vue](https://html2img.com/integrations/javascript/#vue-and-nuxt), and anything that can make an HTTP request works with the API. Every integration is listed on the [integrations hub](https://html2img.com/integrations/).
 
 ## Development
 
