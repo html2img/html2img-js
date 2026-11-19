@@ -1,6 +1,6 @@
-[![html2img - HTML to image API, rendered in real Chrome](https://html2img.com/og-image.png)](https://html2img.com)
+[![HTML to Image (html2img): HTML to image API, rendered in real Chrome](https://html2img.com/og-image.png)](https://html2img.com)
 
-# html2img JavaScript client
+# HTML to Image (html2img) JavaScript client
 
 [![npm Version](https://img.shields.io/npm/v/%40html2img%2Fclient)](https://www.npmjs.com/package/@html2img/client)
 [![Node Version](https://img.shields.io/node/v/%40html2img%2Fclient)](https://www.npmjs.com/package/@html2img/client)
